@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo博客搭建全过程及我踩过的坑</title>
+      <link href="/boke-github.io/2026/09/25/Hexo%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E6%88%91%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/"/>
+      <url>/boke-github.io/2026/09/25/Hexo%E6%90%AD%E5%BB%BA%E5%85%A8%E8%BF%87%E7%A8%8B%E5%8F%8A%E6%88%91%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+            <tag> 技术踩坑 </tag>
+            
+            <tag> GitHub Pages </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机网络1</title>
+      <link href="/boke-github.io/2026/09/20/jishuangji/"/>
+      <url>/boke-github.io/2026/09/20/jishuangji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="OSI-七层模型分层与各层作用"><a href="#OSI-七层模型分层与各层作用" class="headerlink" title="OSI 七层模型分层与各层作用"></a>OSI 七层模型分层与各层作用</h2><h1 id="一、什么是-OSI-七层模型"><a href="#一、什么是-OSI-七层模型" class="headerlink" title="一、什么是 OSI 七层模型"></a>一、什么是 OSI 七层模型</h1><p>OSI（Open Systems Interconnection，开放系统互连参考模型）是由国际标准化组织（ISO）提出的网络通信分层框架。它把复杂的网络通信过程拆分成七个层次，每层只负责自己那部分工作，层与层之间通过接口交互。</p><p><strong>为什么要分层？</strong></p><ul><li>各层独立：某一层变化不影响其他层</li><li>易于实现和维护：每层可以单独开发测试</li><li>促进标准化：不同厂商的设备能互通</li></ul><h2 id="二、七层总览表"><a href="#二、七层总览表" class="headerlink" title="二、七层总览表"></a>二、七层总览表</h2><p>从上到下一共七层：</p><table><thead><tr><th align="left">层次</th><th align="left">名称</th><th align="left">核心作用</th><th align="left">典型协议</th><th align="left">典型设备</th></tr></thead><tbody><tr><td align="left">第七层</td><td align="left">应用层</td><td align="left">面向应用程序，提供网络服务接口</td><td align="left">HTTP、HTTPS、FTP、DNS、SMTP</td><td align="left">主机（PC、手机）</td></tr><tr><td align="left">第六层</td><td align="left">表示层</td><td align="left">数据格式转换、加密解密、压缩</td><td align="left">JPEG、ASCII、SSL&#x2F;TLS</td><td align="left">主机</td></tr><tr><td align="left">第五层</td><td align="left">会话层</td><td align="left">建立、管理、断开通信会话</td><td align="left">RPC、SQL</td><td align="left">主机</td></tr><tr><td align="left">第四层</td><td align="left">传输层</td><td align="left">端到端通信、端口寻址、流量控制</td><td align="left">TCP、UDP</td><td align="left">网关</td></tr><tr><td align="left">第三层</td><td align="left">网络层</td><td align="left">主机寻址、路由选择</td><td align="left">IP、ICMP、ARP</td><td align="left">路由器</td></tr><tr><td align="left">第二层</td><td align="left">数据链路层</td><td align="left">相邻节点传输、MAC 寻址、成帧</td><td align="left">Ethernet、PPP</td><td align="left">交换机</td></tr><tr><td align="left">第一层</td><td align="left">物理层</td><td align="left">传输比特流（0&#x2F;1），电气信号标准</td><td align="left">-</td><td align="left">集线器、网线、光纤</td></tr></tbody></table><blockquote><p><strong>记忆口诀</strong>：应表会传网数物</p></blockquote><h2 id="三、逐层解析"><a href="#三、逐层解析" class="headerlink" title="三、逐层解析"></a>三、逐层解析</h2><h3 id="第七层·应用层（Application-Layer）"><a href="#第七层·应用层（Application-Layer）" class="headerlink" title="第七层·应用层（Application Layer）"></a>第七层·应用层（Application Layer）</h3><p>应用层是<strong>最靠近用户</strong>的一层，直接为应用程序提供网络服务。我们平时用浏览器打开网页、用 QQ 发消息、用 FTP 传文件，这些都是和应用层打交道。</p><p><strong>常见协议</strong></p><ul><li><strong>HTTP&#x2F;HTTPS</strong>：浏览网页</li><li><strong>FTP</strong>：文件传输</li><li><strong>DNS</strong>：域名解析（将 <a href="http://www.baidu.com/">www.baidu.com</a> 翻译为 IP 地址）</li><li><strong>SMTP&#x2F;POP3&#x2F;IMAP</strong>：收发邮件</li></ul><h3 id="第六层·表示层（Presentation-Layer）"><a href="#第六层·表示层（Presentation-Layer）" class="headerlink" title="第六层·表示层（Presentation Layer）"></a>第六层·表示层（Presentation Layer）</h3><p>表示层负责<strong>数据的翻译和变换</strong>，确保一台主机应用层发出的数据能被另一台主机的应用层读懂。</p><p><strong>主要工作：</strong></p><ul><li>数据格式转换（如 EBCDIC 和 ASCII 互相转换）</li><li>数据加密&#x2F;解密（HTTPS 中的 SSL&#x2F;TLS 就在这层工作）</li><li>数据压缩&#x2F;解压</li></ul><h3 id="第五层·会话层（Session-Layer）"><a href="#第五层·会话层（Session-Layer）" class="headerlink" title="第五层·会话层（Session Layer）"></a>第五层·会话层（Session Layer）</h3><p>会话层负责<strong>建立、管理和终止两个主机之间的会话</strong>。可以理解为“打电话时负责拨号、保持通话、挂断”的一方。</p><p><strong>主要工作：</strong></p><ul><li>建立会话连接</li><li>维持会话同步</li><li>会话断开和恢复</li></ul><h3 id="第四层·传输层（Transport-Layer）"><a href="#第四层·传输层（Transport-Layer）" class="headerlink" title="第四层·传输层（Transport Layer）"></a>第四层·传输层（Transport Layer）</h3><p>传输层负责<strong>端到端通信</strong>，把数据从一台主机的某个进程送到另一台主机的对应进程。它通过<strong>端口号</strong>来区分不同的应用程序。</p><p><strong>两大协议：</strong></p><table><thead><tr><th align="left">协议</th><th align="left">特点</th><th align="left">适用场景</th></tr></thead><tbody><tr><td align="left"><strong>TCP</strong></td><td align="left">面向连接、可靠传输、有流量控制和重传</td><td align="left">网页浏览、文件下载、邮件</td></tr><tr><td align="left"><strong>UDP</strong></td><td align="left">无连接、不保证可靠、速度快</td><td align="left">视频通话、直播、游戏</td></tr></tbody></table><blockquote><p><strong>关键区分</strong>：IP 地址找到<strong>主机</strong>，端口号找到<strong>主机上的那个程序</strong>。</p></blockquote><h3 id="第三层·网络层（Network-Layer）"><a href="#第三层·网络层（Network-Layer）" class="headerlink" title="第三层·网络层（Network Layer）"></a>第三层·网络层（Network Layer）</h3><p>网络层负责<strong>主机到主机</strong>的通信，解决的是<strong>数据从哪台主机出发，走哪条路到达目标主机</strong>的问题。</p><p><strong>核心功能：</strong></p><ul><li><strong>逻辑寻址</strong>：使用 IP 地址标识网络中的主机</li><li><strong>路由选择</strong>：路由器根据路由信息选择最佳路径</li></ul><p><strong>常见协议</strong></p><ul><li><strong>IP</strong>（Internet Protocol）：网际协议</li><li><strong>ICMP</strong>：互联网控制报文协议（ping 命令就是用它）</li><li><strong>ARP</strong>：地址解析协议（把 IP 地址转成 MAC 地址）</li></ul><h3 id="第二层·数据链路层（Data-Link-Layer）"><a href="#第二层·数据链路层（Data-Link-Layer）" class="headerlink" title="第二层·数据链路层（Data Link Layer）"></a>第二层·数据链路层（Data Link Layer）</h3><p>数据链路层负责<strong>相邻节点之间</strong>的可靠传输。它把网络层交下来的 IP 数据包封装成<strong>帧（Frame）</strong>，通过 <strong>MAC 地址</strong>在局域网内找到下一个设备。</p><p><strong>主要工作：</strong></p><ul><li>封装成帧：加帧头（含源&#x2F;目的 MAC）和帧尾</li><li>差错检测：发现物理层传输中的错误</li><li>物理寻址：MAC 地址</li></ul><blockquote><p><strong>交换机</strong>工作在这一层，根据 MAC 地址表转发数据帧。</p></blockquote><h3 id="第一层·物理层（Physical-Layer）"><a href="#第一层·物理层（Physical-Layer）" class="headerlink" title="第一层·物理层（Physical Layer）"></a>第一层·物理层（Physical Layer）</h3><p>物理层是<strong>最低层</strong>，负责在物理介质上传输<strong>原始的比特流（0 和 1）</strong>。它不关心数据代表什么含义，只负责把电信号、光信号或无线电波从一个地方搬到另一个地方。</p><p><strong>常见传输介质：</strong></p><ul><li>双绞线网线</li><li>光纤</li><li>无线电波（Wi-Fi）</li></ul><p><strong>设备：</strong> 集线器（Hub）、中继器</p><h2 id="四、数据封装与解封装"><a href="#四、数据封装与解封装" class="headerlink" title="四、数据封装与解封装"></a>四、数据封装与解封装</h2><p>数据在发送方是<strong>从上到下逐层封装</strong>，在接收方是<strong>从下到上逐层解封装</strong>。</p><h3 id="发送方：封装过程"><a href="#发送方：封装过程" class="headerlink" title="发送方：封装过程"></a>发送方：封装过程</h3><ol><li>应用层：用户数据（Data）</li><li>传输层：段（Segment）——添加 TCP&#x2F;UDP 头部（源端口、目的端口）</li><li>网络层：包（Packet）——添加 IP 头部（源 IP、目的 IP）</li><li>数据链路层：帧（Frame）——添加帧头（源 MAC、目的 MAC）和帧尾（FCS 校验）</li><li>物理层：比特流（Bits）——转换成电信号或光信号传输</li></ol><h3 id="接收方：解封装过程"><a href="#接收方：解封装过程" class="headerlink" title="接收方：解封装过程"></a>接收方：解封装过程</h3><p>从物理层收到比特流后，逐层向上：</p><ol><li>物理层 → 数据链路层：去掉帧头帧尾，取出 Packet</li><li>数据链路层 → 网络层：去掉 IP 头部，取出 Segment</li><li>网络层 → 传输层：去掉 TCP&#x2F;UDP 头部，取出 Data</li><li>传输层 → 应用层：把数据交给对应的应用程序</li></ol><h2 id="五、OSI-七层-vs-TCP-IP-四层"><a href="#五、OSI-七层-vs-TCP-IP-四层" class="headerlink" title="五、OSI 七层 vs TCP&#x2F;IP 四层"></a>五、OSI 七层 vs TCP&#x2F;IP 四层</h2><p>实际上工业界应用更多的是<strong>TCP&#x2F;IP 四层模型</strong>，它和 OSI 七层模型的对应关系：</p><table><thead><tr><th align="left">OSI 七层</th><th align="left">TCP&#x2F;IP 四层</th></tr></thead><tbody><tr><td align="left">应用层、表示层、会话层</td><td align="left">应用层</td></tr><tr><td align="left">传输层</td><td align="left">传输层</td></tr><tr><td align="left">网络层</td><td align="left">网际层（Internet 层）</td></tr><tr><td align="left">数据链路层、物理层</td><td align="left">网络接口层</td></tr></tbody></table><h2 id="六、常见误区与小结"><a href="#六、常见误区与小结" class="headerlink" title="六、常见误区与小结"></a>六、常见误区与小结</h2><p><strong>容易弄混的几点：</strong></p><ol><li><strong>传输层不等于网络层</strong>：传输层管<strong>进程到进程</strong>（端口号），网络层管<strong>主机到主机</strong>（IP 地址）</li><li><strong>MAC 地址 vs IP 地址</strong>：MAC 地址通常烧录在网卡中，用于局域网内通信；IP 是逻辑地址，可跨网络使用</li><li><strong>交换机 vs 路由器</strong>：交换机工作在数据链路层（看 MAC），路由器工作在网络层（看 IP）</li></ol><p><strong>总结：</strong></p><blockquote><p>应用层给软件用，传输层管端口，网络层找 IP，数据链路层认 MAC，物理层搬比特。</p></blockquote><hr><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul><li>《计算机网络》（谢希仁，第八版）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+            <tag> OSI模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/boke-github.io/2026/09/06/hello-world/"/>
+      <url>/boke-github.io/2026/09/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
