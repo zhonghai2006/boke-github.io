@@ -188,37 +188,15 @@
   isHighlightShrink: false,
   isToc: false,
   pageType: '404'
-}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
-  const $loadingBox = document.getElementById('loading-box')
-  const $body = document.body
-  const preloader = {
-    endLoading: () => {
-      if ($loadingBox.classList.contains('loaded')) return
-      $body.style.overflow = ''
-      $loadingBox.classList.add('loaded')
-    },
-    initLoading: () => {
-      $body.style.overflow = 'hidden'
-      $loadingBox.classList.remove('loaded')
-    }
-  }
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
 
-  preloader.initLoading()
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
 
-  if (document.readyState === 'complete') {
-    preloader.endLoading()
-  } else {
-    window.addEventListener('load', preloader.endLoading)
-    document.addEventListener('DOMContentLoaded', preloader.endLoading)
-    // Add timeout protection: force end after 7 seconds
-    setTimeout(preloader.endLoading, 7000)
-  }
-
-  if (true) {
-    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
-    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
-  }
-})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/boke-github.io/img/xiaobaobao.png" onerror="this.onerror=null;this.src='/boke-github.io/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/boke-github.io/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/boke-github.io/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/boke-github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/boke-github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page type-404" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/boke-github.io/"><span class="site-name">yun jing</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/boke-github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">yun jing</h1></header><main class="layout hide-aside" id="content-inner"><div class="nc" id="page"><div class="error-content"><div class="error-img"><img src="/boke-github.io/img/error-page.png" alt="Page not found"></div><div class="error-info"><h1 class="error_title">404</h1><div class="error_subtitle">页面走丢了，去首页看看吧</div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By yun jing</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.1.260810</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/boke-github.io/js/utils.js?v=5.7.1.260810"></script><script src="/boke-github.io/js/main.js?v=5.7.1.260810"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/boke-github.io/img/xiaobaobao.png" onerror="this.onerror=null;this.src='/boke-github.io/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/boke-github.io/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/boke-github.io/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/boke-github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/boke-github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><span> 站点</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/boke-github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/boke-github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/boke-github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/boke-github.io/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0)"><i class="fa-fw fas fa-dice"></i><span> 随机串门</span></a></div></div></div></div><div class="page type-404" id="body-wrap"><header class="not-top-img fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/boke-github.io/"><img class="site-icon" src="/boke-github.io/img/xiaobaobao.png" alt="Logo"><span class="site-name">yun jing</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/boke-github.io/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><span> 站点</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/boke-github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/boke-github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/boke-github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/boke-github.io/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/boke-github.io/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0)"><i class="fa-fw fas fa-dice"></i><span> 随机串门</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">yun jing</h1></header><main class="layout hide-aside" id="content-inner"><div class="nc" id="page"><div class="error-content"><div class="error-img"><img src="/boke-github.io/img/error-page.png" alt="Page not found"></div><div class="error-info"><h1 class="error_title">404</h1><div class="error_subtitle">页面走丢了，去首页看看吧</div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By yun jing</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.1.260810</a></span></div><div class="footer_custom_text"><p style="margin:0">© 2026 By yun jing | 正在学习 Web 安全与开发</p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/boke-github.io/js/utils.js?v=5.7.1.260810"></script><script src="/boke-github.io/js/main.js?v=5.7.1.260810"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
   const parseViewBox = viewBox => {
     if (!viewBox) return null
     const parts = viewBox.trim().split(/[\s,]+/).map(n => Number(n))
@@ -582,7 +560,32 @@
 
   btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
   window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
-})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+})()</script></div><script>
+(function () {
+  var B = [
+    'https://blog.isww.cn','https://radishzz.cc/','https://yunpengtai.top','https://nekoa.day',
+    'https://loveing.love','https://blog.hotsouprealm.top','https://blog.hikariyo.net','https://clb.pages.dev',
+    'https://www.northarea.tech','https://0727.site','https://stephenleng.com/cn','http://catlyingroof.top',
+    'https://uwucocoa.moe','https://blog.mmoe.work','https://www.bmpi.dev','https://qingwan.top',
+    'https://blog.oopsky.top','https://next.c12th.cn','https://rokcso.com','https://wusiyu.me',
+    'https://www.xinai.de','https://ashlord.com','https://blog.luvying.com','https://dvd.moe',
+    'https://jhuo.ca/','https://matsuhara.video.blog','https://blog.keepchen.com','https://9bie.org',
+    'https://hi-nikola.cn','https://blog.bobh0724.net','https://www.lanol.cn','https://hilllei.com',
+    'https://kkocdko.site','https://normalsubgroup.cauchy.top','https://sikan.moe','https://robes.xin',
+    'https://blog.lyc8503.net','https://academic.mahaofei.com','https://yousazoe.top','https://blog.zerohzzzz.cn',
+    'https://ffbf.top','https://subilan.win'
+  ];
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    while (t && t.tagName !== 'A') { t = t.parentNode; }
+    if (t && t.textContent && t.textContent.indexOf('随机串门') > -1) {
+      e.preventDefault();
+      window.open(B[Math.floor(Math.random() * B.length)], '_blank', 'noopener');
+    }
+  }, true);
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
   window.pjax = new Pjax({
